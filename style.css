@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --vary-dark-cyan: hsl(179, 100%, 13%);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --font-size: 15px;
+  --font-lexend: "Big Shoulders Display", cursive;
+  --font-shoulder-font: "Big Shoulders Display", cursive;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  padding: 3rem 2rem;
+}
+
+.card {
+  padding: 2rem;
+  max-height: 22rem;
+}
+.card > * {
+  margin: 1.25rem 0;
+}
+
+.card > h1 {
+  color: var(--very-light-gray);
+  font-weight: 700;
+  font-family: var(--font-shoulder-font);
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.card > p {
+  line-height: 1.4;
+  font-size: var(--font-size);
+  color: var(--trans-white);
+  width: 13rem;
+}
+.orange-card {
+  background-color: var(--bright-orange);
+  border-radius: 5px 5px 0 0;
+}
+.cyan-card {
+  background-color: var(--dark-cyan);
+}
+.dark-cyan-card {
+  background-color: var(--vary-dark-cyan);
+}
+
+.btn {
+  padding: 1rem 1.4rem;
+  border-radius: 2rem;
+  border: none;
+  letter-spacing: 1px;
+}
+.orange-card > button {
+  color: var(--bright-orange);
+}
+.cyan-card > button {
+  color: var(--dark-cyan);
+}
+.dark-cyan-card > button {
+  color: var(--vary-dark-cyan);
+}
+.btn:active {
+  border: 1px solid var(--trans-white);
+  color: var(--trans-white);
+  background-color: inherit;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .orange-card {
+    border-radius: 5px 0 0 5px;
+  }
+  .dark-cyan-card {
+    border-radius: 0 5px 5px 0;
+  }
+}
